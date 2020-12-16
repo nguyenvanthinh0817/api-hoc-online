@@ -11,7 +11,7 @@ module.exports = function (app) {
       title: { type: String, required: true },
       priority: { type: Number, required: true },
       url: { type: String, required: true },
-	  status: {type: Boolean, required: true},
+      status: { type: Boolean, required: true },
     },
     {
       timestamps: true,

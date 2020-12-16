@@ -8,15 +8,15 @@ module.exports = function (app) {
   const { Schema } = mongooseClient;
   const schema = new Schema(
     {
-      title: {type: String, required: true},
-	  price: {type: Number, required: true},
-      totalLesson: {type: Number, required: true},
-      teacher: {type: String, required: true},
-	  description: String,
-	  avatar: String,
+      title: { type: String, required: true },
+      price: { type: Number, required: true },
+      totalLesson: { type: Number, required: true },
+      teacher: { type: String, required: true },
+      description: String,
+      avatar: String,
       lessons: [{ type: String, ref: "lessons" }],
       users: [{ type: String, ref: "users" }],
-	  status: {type: Boolean, required: true},
+      status: { type: Boolean, required: true },
     },
     {
       timestamps: true,
