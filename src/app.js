@@ -16,6 +16,7 @@ const middleware = require("./middleware");
 const services = require("./services");
 const appHooks = require("./app.hooks");
 const channels = require("./channels");
+const serverApi = require('./server-api/app');
 
 const authentication = require("./authentication");
 
@@ -51,6 +52,7 @@ app.configure(authentication);
 // Set up our services (see `services/index.js`)
 
 app.configure(services);
+serverApi(app);
 // Set up event channels (see channels.js)
 app.configure(channels);
 
