@@ -5,12 +5,7 @@ module.exports = {
   before: {
     all: [],
     find: [],
-    get: [
-      (context) => {
-        console.log(context);
-        return context;
-      },
-    ],
+    get: [],
     create: [authenticate("jwt"), authorization()],
     update: [authenticate("jwt"), authorization()],
     patch: [authenticate("jwt"), authorization()],
