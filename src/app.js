@@ -10,7 +10,7 @@ const configuration = require("@feathersjs/configuration");
 const express = require("@feathersjs/express");
 const socketio = require("@feathersjs/socketio");
 
-const api = require("./api");
+
 
 const middleware = require("./middleware");
 const services = require("./services");
@@ -51,7 +51,6 @@ app.configure(authentication);
 // Set up our services (see `services/index.js`)
 
 app.configure(services);
-api(app);
 // Set up event channels (see channels.js)
 app.configure(channels);
 
