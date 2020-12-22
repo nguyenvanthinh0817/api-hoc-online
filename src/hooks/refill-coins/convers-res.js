@@ -10,6 +10,8 @@ module.exports = (context) => {
       amount: item.amount,
       content: item.content,
       status: item.status,
+      createdAt: item.createdAt,
+      updatedAt: item.updatedAt,
     };
   });
   result.data = newData;
